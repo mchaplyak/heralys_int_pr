@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Container, Form, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import logo from '../assets/heralys_vector.png'
 
 class Header extends Component {
     render() {
         return (
-            <Navbar collapseOnSelect expand="md" bg="light" variant="light">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand href={"/"}>
                         <img
@@ -15,7 +15,7 @@ class Header extends Component {
                             alt="logo"
                         /> Héralys Talents & Immigrants </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                    <Navbar.Collapse id="responsive-navbar-nav"/>
+                    <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/refLinks">Reference Links</Nav.Link>
                         <NavDropdown title="Clients" id="basic-nav-dropdown">
@@ -33,6 +33,8 @@ class Header extends Component {
                         </NavDropdown>
                             <Nav.Link href="/valCv">Validation CV</Nav.Link>
                     </Nav>
+                        <Form inline /><Form/>
+                        </Navbar.Collapse>
                 </Container>
             </Navbar>
     );

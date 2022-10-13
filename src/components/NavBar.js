@@ -15,7 +15,7 @@ import ListOfCandidatesPage from "../pages/CandidatesPages/ListOfCandidatesPage"
 import ListOfInterviewPage from "../pages/CandidatesPages/listOfInterviewPage";
 import ValCvPage from "../pages/valCvPage/valCvPage";
 
-class Header extends Component {
+class NavBar extends Component {
     render() {
         return (
             <>
@@ -54,22 +54,22 @@ class Header extends Component {
                     </Container>
                 </Navbar>
 
-                    <Routes>
-                        <Route path={"/"} element={<HomePage/>}/>
-                        <Route path={"/refLinks"} element={<RefLinksPage/>}/>
-                        <Route path={"/creatingContacts"} element={<CreatingContactsPage/>}/>
-                        <Route path={"/creatingClients"} element={<CreatingClientsPage/>}/>
-                        <Route path={"/addAnOffer"} element={<AddAnOfferPage/>}/>
-                        <Route path={"/joHistory"} element={<JoHistoryPage/>}/>
-                        <Route path={"/registration"} element={<RegistrationPage/>}/>
-                        <Route path={"/listOfCandidates"} element={<ListOfCandidatesPage/>}/>
-                        <Route path={"/listOfInterviews"} element={<ListOfInterviewPage/>}/>
-                        <Route path={"/valCv"} element={<ValCvPage/>}/>
-                    </Routes>
+                <Routes>
+                    <Route path={"/"} element={<HomePage/>}/>
+                    <Route path={"/refLinks"} element={<RefLinksPage/>}/>
+                    <Route path={"/creatingContacts"} element={<CreatingContactsPage/>}/>
+                    <Route path={"/creatingClients"} element={<CreatingClientsPage/>}/>
+                    <Route path={"/addAnOffer"} element={<AddAnOfferPage/>}/>
+                    <Route path={"/joHistory"} element={<JoHistoryPage/>}/>
+                    <Route path={"/registration"} element={<RegistrationPage/>}/>
+                    <Route path={"/listOfCandidates"} element={<ListOfCandidatesPage/>}/>
+                    <Route path={"/listOfInterviews"} element={<ListOfInterviewPage/>}/>
+                    <Route path={"/valCv"} element={<ValCvPage/>}/>
+                </Routes>
 
             </>
         );
     }
 }
 
-export default Header;
+export default NavBar;

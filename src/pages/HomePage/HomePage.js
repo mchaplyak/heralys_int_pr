@@ -13,9 +13,12 @@ const HomePage = () => {
                     <Col xs={12} md={4} xl={5}>
                         <h2>Heading</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aperiam aut culpa debitis
-                            eveniet expedita ipsum magni odio perferendis quasi qui quibusdam, quidem ratione repellat,
-                            suscipit tempore temporibus veritatis voluptate.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur consequuntur
+                            dolorem impedit, ipsa temporibus? Mollitia necessitatibus odio perferendis quae quam rerum.
+                            Accusamus aliquid amet animi asperiores autem beatae blanditiis consequatur corporis
+                            delectus ea eaque error, et incidunt modi necessitatibus nemo perferendis, quae quaerat quas
+                            quibusdam quidem ratione reiciendis vel voluptas voluptatem! Deserunt eaque id laboriosam
+                            nobis odit quia!
                         </p>
                     </Col>
                 </Row>

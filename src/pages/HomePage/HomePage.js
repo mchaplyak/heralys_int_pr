@@ -6,8 +6,8 @@ const HomePage = () => {
     return (
         <section>
             <Container>
-                <Row className={"align-items-center justify-content-center position-absolute"}>
-                    <Col xs={12} md={4} xl={5}>
+                <Row className={"align-items-center justify-content-center position-absolute mt-5"}>
+                    <Col xs={12} md={3} xl={4}>
                         <img src={bigLogo} alt="bigLogo" width={"350"}/>
                     </Col>
                     <Col xs={12} md={4} xl={5}>

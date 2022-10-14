@@ -3,7 +3,6 @@ import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import {Routes, Route} from "react-router-dom";
 
 import logo from '../assets/heralys_vector.png'
-
 import HomePage from "../pages/HomePage/HomePage";
 import RefLinksPage from "../pages/RefLinksPage/RefLinksPage";
 import CreatingContactsPage from "../pages/ClientPages/CreatingContactsPage";

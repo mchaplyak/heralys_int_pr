@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import  {Navbar} from "react-bootstrap";
+import {Navbar} from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/NavbarCollapse";
 
 class Footer extends Component {

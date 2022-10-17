@@ -10,7 +10,9 @@ class Footer extends Component {
                     <NavbarCollapse className={"justify-content-center"}>
                         <Navbar.Text>
                             Copyright© 2021 - {new Date().getFullYear()}
-                            <a href="https://heralys.com" target={"_blank"} rel="noreferrer">HERALYS Talents & Immigrants</a>
+                            <a href="https://heralys.com" target={"_blank"} rel="noreferrer">
+                                HERALYS Talents & Immigrants
+                            </a>
                         </Navbar.Text>
                     </NavbarCollapse>
                 </Navbar>

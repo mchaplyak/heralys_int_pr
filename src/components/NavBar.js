@@ -13,6 +13,8 @@ import RegistrationPage from "../pages/CandidatesPages/RegistrationPage";
 import ListOfCandidatesPage from "../pages/CandidatesPages/ListOfCandidatesPage";
 import ListOfInterviewPage from "../pages/CandidatesPages/listOfInterviewPage";
 import ValCvPage from "../pages/valCvPage/valCvPage";
+import DataBase from "../pages/Manage/DataBase";
+import LinksOfInt from "../pages/Manage/LinksOfInt";
 
 class NavBar extends Component {
     render() {
@@ -48,6 +50,10 @@ class NavBar extends Component {
                                     <NavDropdown.Item href={"/listOfInterviews"}>List of interviews</NavDropdown.Item>
                                 </NavDropdown>
                                 <Nav.Link href={"/valCv"}>Validation CV</Nav.Link>
+                                <NavDropdown title={"Manage"} id={"basic-nav-dropdown"}>
+                                    <Nav.Link href={"/dataBase"}>Data Base</Nav.Link>
+                                    <Nav.Link href={"/linksOfInt"}>Links of Interest</Nav.Link>
+                                </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -64,8 +70,9 @@ class NavBar extends Component {
                     <Route path={"/listOfCandidates"} element={<ListOfCandidatesPage/>}/>
                     <Route path={"/listOfInterviews"} element={<ListOfInterviewPage/>}/>
                     <Route path={"/valCv"} element={<ValCvPage/>}/>
+                    <Route path={"/dataBase"} element={<DataBase/>}/>
+                    <Route path={"/linksOfInt"} element={<LinksOfInt/>}/>
                 </Routes>
-
             </>
         );
     }

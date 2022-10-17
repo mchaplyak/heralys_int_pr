@@ -6,12 +6,12 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <Navbar fixed={"bottom"} bg={"dark"} variant={"dark"}>
+                <Navbar fixed={"bottom"} bg={"dark"} variant={"dark"} className={"p-0"}>
                     <NavbarCollapse className={"justify-content-center"}>
                         <Navbar.Text>
-                            Copyright© 2021 - {new Date().getFullYear()}
+                            {`Copyright© 2021 - ${new Date().getFullYear()} `}
                             <a href="https://heralys.com" target={"_blank"} rel="noreferrer">
-                                HERALYS Talents & Immigrants
+                                Heralys
                             </a>
                         </Navbar.Text>
                     </NavbarCollapse>

@@ -13,7 +13,6 @@ import RegistrationPage from "../pages/CandidatesPages/RegistrationPage";
 import ListOfCandidatesPage from "../pages/CandidatesPages/ListOfCandidatesPage";
 import ListOfInterviewPage from "../pages/CandidatesPages/listOfInterviewPage";
 import ValCvPage from "../pages/valCvPage/valCvPage";
-import DataBase from "../pages/Manage/DataBase";
 import LinksOfInt from "../pages/Manage/LinksOfInt";
 import LangTypeDb from "../pages/Manage/DbPages/LangTypeDb";
 import CityDb from "../pages/Manage/DbPages/CityDb";

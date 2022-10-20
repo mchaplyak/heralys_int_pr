@@ -15,6 +15,22 @@ import ListOfInterviewPage from "../pages/CandidatesPages/listOfInterviewPage";
 import ValCvPage from "../pages/valCvPage/valCvPage";
 import DataBase from "../pages/Manage/DataBase";
 import LinksOfInt from "../pages/Manage/LinksOfInt";
+import LangTypeDb from "../pages/Manage/DbPages/LangTypeDb";
+import CityDb from "../pages/Manage/DbPages/CityDb";
+import TransportDb from "../pages/Manage/DbPages/TransportDb";
+import CountryDb from "../pages/Manage/DbPages/CountryDb";
+import TypeOfVisaDb from "../pages/Manage/DbPages/TypeOfVisaDb";
+import VisaStatusDb from "../pages/Manage/DbPages/VisaStatusDb";
+import EduLvlDb from "../pages/Manage/DbPages/EduLvlDb";
+import ExpDb from "../pages/Manage/DbPages/ExpDb";
+import StateDb from "../pages/Manage/DbPages/StateDb";
+import SourceDb from "../pages/Manage/DbPages/SourceDb";
+import TypeOfPosDb from "../pages/Manage/DbPages/TypeOfPosDb";
+import DomainTypeDb from "../pages/Manage/DbPages/DomainTypeDb";
+import StudyTimeDb from "../pages/Manage/DbPages/StudyTimeDb";
+import TypesOfEmplDb from "../pages/Manage/DbPages/TypesOfEmplDb";
+import SalaryDb from "../pages/Manage/DbPages/SalaryDb";
+import NotFoundPage from "../pages/NotFoundPage";
 
 class NavBar extends Component {
     render() {
@@ -51,7 +67,7 @@ class NavBar extends Component {
                                 </NavDropdown>
                                 <Nav.Link href={"/valCv"}>Validation CV</Nav.Link>
                                 <NavDropdown title={"Manage"} id={"basic-nav-dropdown"}>
-                                    <Nav.Link href={"/dataBase"}>Data Base</Nav.Link>
+                                    <Nav.Link href={"/dbLangType"}>Data Base</Nav.Link>
                                     <Nav.Link href={"/linksOfInt"}>Links of Interest</Nav.Link>
                                 </NavDropdown>
                             </Nav>
@@ -60,18 +76,35 @@ class NavBar extends Component {
                 </Navbar>
 
                 <Routes>
-                    <Route path={"/"} element={<HomePage/>}/>
-                    <Route path={"/refLinks"} element={<RefLinksPage/>}/>
-                    <Route path={"/creatingContacts"} element={<CreatingContactsPage/>}/>
-                    <Route path={"/creatingClients"} element={<CreatingClientsPage/>}/>
-                    <Route path={"/addAnOffer"} element={<AddAnOfferPage/>}/>
-                    <Route path={"/joHistory"} element={<JoHistoryPage/>}/>
-                    <Route path={"/registration"} element={<RegistrationPage/>}/>
-                    <Route path={"/listOfCandidates"} element={<ListOfCandidatesPage/>}/>
-                    <Route path={"/listOfInterviews"} element={<ListOfInterviewPage/>}/>
-                    <Route path={"/valCv"} element={<ValCvPage/>}/>
-                    <Route path={"/dataBase"} element={<DataBase/>}/>
-                    <Route path={"/linksOfInt"} element={<LinksOfInt/>}/>
+                    <Route path={"/*"} element={<HomePage/>}/>
+                    <Route path={"refLinks"} element={<RefLinksPage/>}/>
+                    <Route path={"creatingContacts"} element={<CreatingContactsPage/>}/>
+                    <Route path={"creatingClients"} element={<CreatingClientsPage/>}/>
+                    <Route path={"addAnOffer"} element={<AddAnOfferPage/>}/>
+                    <Route path={"joHistory"} element={<JoHistoryPage/>}/>
+                    <Route path={"registration"} element={<RegistrationPage/>}/>
+                    <Route path={"listOfCandidates"} element={<ListOfCandidatesPage/>}/>
+                    <Route path={"listOfInterviews"} element={<ListOfInterviewPage/>}/>
+                    <Route path={"valCv"} element={<ValCvPage/>}/>
+                    <Route path={"linksOfInt"} element={<LinksOfInt/>}/>
+                    {/*<Route path={"dataBase/*"} element={<DataBase/>}/>*/}
+                    <Route path={"/dbLangType/*"} element={<LangTypeDb/>}/>
+                    <Route path={"/dbCity/*"} element={<CityDb/>}/>
+                    <Route path={"/dbTransport/*"} element={<TransportDb/>}/>
+                    <Route path={"dbCountry/*"} element={<CountryDb/>}/>
+                    <Route path={"dbTov/*"} element={<TypeOfVisaDb/>}/>
+                    <Route path={"dbVs/*"} element={<VisaStatusDb/>}/>
+                    <Route path={"dbEdLvl/*"} element={<EduLvlDb/>}/>
+                    <Route path={"dbExp/*"} element={<ExpDb/>}/>
+                    <Route path={"dbState/*"} element={<StateDb/>}/>
+                    <Route path={"dbSrc/*"} element={<SourceDb/>}/>
+                    <Route path={"dbTop/*"} element={<TypeOfPosDb/>}/>
+                    <Route path={"dbDomType/*"} element={<DomainTypeDb/>}/>
+                    <Route path={"dbStudyTime/*"} element={<StudyTimeDb/>}/>
+                    <Route path={"dbToe/*"} element={<TypesOfEmplDb/>}/>
+                    <Route path={"test"} element={<SalaryDb/>}/>
+                    <Route path={"dbSalary/*"} element={<SalaryDb/>}/>
+                    <Route path={"*"} element={<NotFoundPage/>}/>
                 </Routes>
             </>
         );

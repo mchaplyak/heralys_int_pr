@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Container, InputGroup, Navbar, Form, Row} from "react-bootstrap";
+import {Button, Container, InputGroup, Navbar, Form, Row, ListGroup, ListGroupItem} from "react-bootstrap";
 import './LinksOfInt.scss'
 
 class LinksOfInt extends Component {
@@ -13,7 +13,7 @@ class LinksOfInt extends Component {
                         <Button variant="outline-primary" size={"sm"} className={"me-2"}>Update</Button>
                     </Container>
                 </Navbar>
-                <Container className={"d-flex align-items-center justify-content-center mt-4"}>
+                <Container className={"text-center mt-4"}>
                     <h3>Links of interest</h3>
                 </Container>
                 <Container id={"search_box"}>
@@ -23,7 +23,14 @@ class LinksOfInt extends Component {
                         </InputGroup>
                     </Row>
                 </Container>
-
+                <Container>
+                    <ListGroup as={"ol"} numbered>
+                        <ListGroupItem as={"li"}>Link 1</ListGroupItem>
+                        <ListGroupItem as={"li"}>Link 2</ListGroupItem>
+                        <ListGroupItem as={"li"}>Link 3</ListGroupItem>
+                        <ListGroupItem as={"li"}>Link ...</ListGroupItem>
+                    </ListGroup>
+                </Container>
             </>
         );
     }

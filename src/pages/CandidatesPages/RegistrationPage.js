@@ -4,7 +4,7 @@ class RegistrationPage extends Component {
     render() {
         return (
             <div>
-                Creating Contacts Page
+                Registration Page
             </div>
         );
     }

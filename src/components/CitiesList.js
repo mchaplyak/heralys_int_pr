@@ -3,14 +3,7 @@ import { Link } from "react-router-dom";
 
 const Record = (props) => (
   <tr>
-    <td>{props.record.prenom_candidat}</td>
-    <td>{props.record.nom_candidat}</td>
-    <td>{props.record.addresse_candidat}</td>
-    <td>{props.record.courriel_candidat}</td>
-    <td>{props.record.date_arriver}</td>
-    <td>{props.record.date_fin_permis_travail}</td>
-    <td>{props.record.etudiant}</td>
-    <td>{props.record.infolettre}</td>
+    <td>{props.record.nom}</td>
   </tr>
 );
 
@@ -20,7 +13,7 @@ export default function RecordList() {
   // fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`http://localhost:5000/listOfCandidates/`);
+      const response = await fetch(`http://localhost:5000/dbCity/`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -63,18 +56,12 @@ export default function RecordList() {
   // display the table with the records of individuals.
   return (
     <div>
-      <h3>Candidates List</h3>
+      <h3>Cities List</h3>
+
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <thead>
           <tr>
-            <th>Prénom</th>
-            <th>Nom</th>
-            <th>Adresse</th>
-            <th>Courriel</th>
-            <th>Date d'arrivée</th>
-            <th>Date fin du permis de travail</th>
-            <th>Étudiant</th>
-            <th>Infolettre</th>
+            <th>Nom de la ville</th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>

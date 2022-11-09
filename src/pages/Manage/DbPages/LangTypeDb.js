@@ -32,9 +32,7 @@ const LangTypeDb = () => {
           </Container>
         </Navbar>
         <div className="container-fluid">
-          <Container className={"text-center mt-4"}>
-            <h3>Language type</h3>
-          </Container>
+          <Container className={"text-center mt-4"}></Container>
           <Container id={"search_box"}>
             {/*<Row>
               <InputGroup className="mb-3">

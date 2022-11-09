@@ -44,14 +44,14 @@ export default function RecordList() {
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newLanguage = { ...form };
 
-    await fetch("http://localhost:5000/dbCity/add", {
+    await fetch("http://localhost:5000/dbCountry/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newLanguage),
     }).catch((error) => {
-      window.alert("City was added!");
+      window.alert("Country was added!");
       return;
     });
 
@@ -60,7 +60,7 @@ export default function RecordList() {
   // fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`http://localhost:5000/dbCity/`);
+      const response = await fetch(`http://localhost:5000/dbCountry/`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -79,7 +79,7 @@ export default function RecordList() {
 
   //  delete
   async function deleteRecord(id) {
-    await fetch(`http://localhost:5000/dbCity/${id}`, {
+    await fetch(`http://localhost:5000/dbCountry/${id}`, {
       method: "DELETE",
     });
 
@@ -102,7 +102,7 @@ export default function RecordList() {
 
   return (
     <div>
-      <h3>Add City</h3>
+      <h3>Add Country</h3>
       <div>
         <form onSubmit={onSubmit}>
           <div className="form-group">
@@ -118,14 +118,14 @@ export default function RecordList() {
             <input
               style={{ margin: "10px 0px" }}
               type="submit"
-              value="Add city"
+              value="Add country"
               className="btn btn-info"
               onClick={() => window.location.reload(false)}
             />
           </div>
         </form>
       </div>
-      <h3>Cities List</h3>
+      <h3>Country List</h3>
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <tbody>{recordList()}</tbody>
       </table>

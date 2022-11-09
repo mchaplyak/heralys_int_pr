@@ -6,7 +6,7 @@ import Create from "./Create";
 const Record = (props) => (
   <tr>
     <td>{props.record.name}</td>
-    <td></td>
+
     <button
       className="btn btn-link"
       onClick={() => {

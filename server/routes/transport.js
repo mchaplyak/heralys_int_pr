@@ -9,10 +9,10 @@ const dbo = require("../db/conn");
 const ObjectId = require("mongodb").ObjectId;
 
 // get a list of all the records
-recordRoutes.route("/dbCity").get(function (req, res) {
+recordRoutes.route("/dbTransport").get(function (req, res) {
   let db_connect = dbo.getDb("Heralys");
   db_connect
-    .collection("Ville")
+    .collection("Transport")
     .find({})
     .toArray(function (err, result) {
       if (err) throw err;
@@ -21,32 +21,32 @@ recordRoutes.route("/dbCity").get(function (req, res) {
 });
 
 // get a single by id
-recordRoutes.route("/dbCity/:id").get(function (req, res) {
+recordRoutes.route("/dbTransport/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
-  db_connect.collection("Ville").findOne(myquery, function (err, result) {
+  db_connect.collection("Transport").findOne(myquery, function (err, result) {
     if (err) throw err;
     res.json(result);
   });
 });
 
 // create
-recordRoutes.route("/dbCity/add").post(function (req, response) {
+recordRoutes.route("/dbTransport/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
     nom: req.body.name,
   };
-  db_connect.collection("Ville").insertOne(myobj, function (err, res) {
+  db_connect.collection("Transport").insertOne(myobj, function (err, res) {
     if (err) throw err;
     response.json(res);
   });
 });
 
 // delete
-recordRoutes.route("/dbCity/:id").delete((req, response) => {
+recordRoutes.route("/dbTransport/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
-  db_connect.collection("Ville").deleteOne(myquery, function (err, obj) {
+  db_connect.collection("Transport").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");
     response.json(obj);

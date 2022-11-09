@@ -9,6 +9,8 @@ app.use(express.json());
 app.use(require("./routes/candidate"));
 app.use(require("./routes/cities"));
 app.use(require("./routes/languages"));
+app.use(require("./routes/transport"));
+app.use(require("./routes/country"));
 
 // get driver connection
 const dbo = require("./db/conn");

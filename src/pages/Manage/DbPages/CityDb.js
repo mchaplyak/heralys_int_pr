@@ -31,6 +31,7 @@ const CityDb = () => {
           </Container>
         </Navbar>
         <div className="container-fluid">
+          {/*
           <Container className={"text-center mt-4"}>
             <h3>City</h3>
           </Container>
@@ -41,6 +42,7 @@ const CityDb = () => {
               </InputGroup>
             </Row>
           </Container>
+          */}
           <CitiesList />
         </div>
       </div>

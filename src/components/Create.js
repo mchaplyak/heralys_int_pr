@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
 
 export default function Create() {
   const [form, setForm] = useState({
@@ -11,13 +10,6 @@ export default function Create() {
     return setForm((prev) => {
       return { ...prev, ...value };
     });
-  }
-
-  const [list, setList] = useState([]);
-
-  function updateLanguage(e) {
-    const lang = e.target.value;
-    setList([...list, lang]);
   }
 
   // This function will handle the submission.

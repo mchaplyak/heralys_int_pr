@@ -11,6 +11,8 @@ app.use(require("./routes/cities"));
 app.use(require("./routes/languages"));
 app.use(require("./routes/transport"));
 app.use(require("./routes/country"));
+app.use(require("./routes/typeVisa"));
+app.use(require("./routes/visaStatus"));
 
 // get driver connection
 const dbo = require("./db/conn");

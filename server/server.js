@@ -18,6 +18,10 @@ app.use(require("./routes/experience"));
 app.use(require("./routes/status"));
 app.use(require("./routes/source"));
 app.use(require("./routes/position"));
+app.use(require("./routes/domainType"));
+app.use(require("./routes/studyTime"));
+app.use(require("./routes/typeEmpl"));
+app.use(require("./routes/salary"));
 
 // get driver connection
 const dbo = require("./db/conn");

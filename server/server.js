@@ -13,6 +13,11 @@ app.use(require("./routes/transport"));
 app.use(require("./routes/country"));
 app.use(require("./routes/typeVisa"));
 app.use(require("./routes/visaStatus"));
+app.use(require("./routes/educationLevel"));
+app.use(require("./routes/experience"));
+app.use(require("./routes/status"));
+app.use(require("./routes/source"));
+app.use(require("./routes/position"));
 
 // get driver connection
 const dbo = require("./db/conn");

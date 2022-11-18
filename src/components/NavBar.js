@@ -11,6 +11,7 @@ import AddAnOfferPage from "../pages/JobOfferPages/AddAnOfferPage";
 import JoHistoryPage from "../pages/JobOfferPages/JoHistoryPage";
 import RegistrationPage from "../pages/CandidatesPages/RegistrationPage";
 import ListOfCandidatesPage from "../pages/CandidatesPages/ListOfCandidatesPage";
+import AddCandidatePage from "../pages/CandidatesPages/AddCandidatePage";
 import ListOfInterviewPage from "../pages/CandidatesPages/listOfInterviewPage";
 import ValCvPage from "../pages/valCvPage/valCvPage";
 import LinksOfInt from "../pages/Manage/LinksOfInt";
@@ -82,6 +83,9 @@ class NavBar extends Component {
                   <NavDropdown.Item href={"/listOfCandidates"}>
                     List of candidates
                   </NavDropdown.Item>
+                  <NavDropdown.Item href={"/listOfCandidates/add"}>
+                    Add a candidate
+                  </NavDropdown.Item>
                   <NavDropdown.Item href={"/listOfInterviews"}>
                     List of interviews
                   </NavDropdown.Item>
@@ -105,6 +109,7 @@ class NavBar extends Component {
           <Route path={"joHistory"} element={<JoHistoryPage />} />
           <Route path={"registration"} element={<RegistrationPage />} />
           <Route path={"listOfCandidates"} element={<ListOfCandidatesPage />} />
+          <Route path={"listOfCandidates/add"} element={<AddCandidatePage />} />
           <Route path={"listOfInterviews"} element={<ListOfInterviewPage />} />
           <Route path={"valCv"} element={<ValCvPage />} />
           <Route path={"linksOfInt"} element={<LinksOfInt />} />

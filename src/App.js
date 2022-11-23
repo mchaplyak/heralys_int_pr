@@ -1,16 +1,20 @@
-import  'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import './App.css';
+import "./App.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import "./App.scss"
-
+import Edit from "./components/Edit";
+import "./App.scss";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div id={"main"}>
-        <NavBar/>
-        <Footer/>
+      <NavBar />
+      <Routes>
+        <Route path="/edit/:id" element={<Edit />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

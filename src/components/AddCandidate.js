@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 
 export default function AddCandidate() {
   const [form, setForm] = useState({
-    name: "",
+    prenom_candidat: "",
+    nom_candidat: "",
+    addresse_candidat: "",
+    courriel_candidat: "",
+    date_arriver: "",
+    date_fin_permis_travail: "",
+    etudiant: "",
   });
 
   //update the state properties.
@@ -30,7 +36,15 @@ export default function AddCandidate() {
       return;
     });
 
-    setForm({ name: "" });
+    setForm({
+      prenom_candidat: "",
+      nom_candidat: "",
+      addresse_candidat: "",
+      courriel_candidat: "",
+      date_arriver: "",
+      date_fin_permis_travail: "",
+      etudiant: "",
+    });
   }
 
   return (
@@ -95,7 +109,7 @@ export default function AddCandidate() {
             type="checkbox"
             id="etudiant"
             value={form.etudiant}
-            onChange={(e) => updateForm({ etudiant: e.target.value })}
+            onChange={(e) => updateForm({ etudiant: (e.target.value = "OUI") })}
           />
           <div className="form-group">
             <input

@@ -20,6 +20,16 @@ recordRoutes.route("/listOfCandidates").get(function (req, res) {
     });
 });
 
+// This section will help you get a single record by id
+recordRoutes.route("/listOfCandidates/:id").get(function (req, res) {
+  let db_connect = dbo.getDb();
+  let myquery = { _id: ObjectId(req.params.id) };
+  db_connect.collection("Candidat").findOne(myquery, function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
 // create a new candidate
 recordRoutes.route("/listOfCandidates/add").post(function (req, response) {
   let db_connect = dbo.getDb();
@@ -37,6 +47,28 @@ recordRoutes.route("/listOfCandidates/add").post(function (req, response) {
     response.json(res);
   });
 });
+
+// update
+recordRoutes
+  .route("/listOfCandidates/update/:id")
+  .post(function (req, response) {
+    let db_connect = dbo.getDb();
+    let myquery = { _id: ObjectId(req.params.id) };
+    let newvalues = {
+      $set: {
+        prenom_candidat: req.body.prenom_candidat,
+        nom_candidat: req.body.nom_candidat,
+        addresse_candidat: req.body.addresse_candidat,
+      },
+    };
+    db_connect
+      .collection("Candidat")
+      .updateOne(myquery, newvalues, function (err, res) {
+        if (err) throw err;
+        console.log("1 document updated");
+        response.json(res);
+      });
+  });
 
 // delete
 recordRoutes.route("/listOfCandidates/:id").delete((req, response) => {

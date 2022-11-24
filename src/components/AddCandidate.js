@@ -18,7 +18,7 @@ export default function AddCandidate() {
     });
   }
 
-  // This function will handle the submission.
+  //handle the submission.
   async function onSubmit(e) {
     e.preventDefault();
 

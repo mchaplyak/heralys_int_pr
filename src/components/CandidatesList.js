@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { confirmAlert } from "react-confirm-alert"; // Import
+import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 
 const Record = (props) => (
   <tr>
@@ -85,12 +87,12 @@ export default function RecordList() {
 
   // display the table with the records of individuals.
   return (
-    <div class="container" style={{ marginTop: 20 }}>
+    <div className="container-fluid" style={{ marginTop: 20 }}>
       <h3>Candidates List</h3>
       <Link to={`/listOfCandidates/add`} className="btn btn-info">
         Add Candidate
       </Link>{" "}
-      <table className="table table-striped" style={{ marginTop: 20 }}>
+      <table className="table" style={{ marginTop: 20 }}>
         <thead>
           <tr>
             <th>Prénom</th>
@@ -100,6 +102,9 @@ export default function RecordList() {
             <th>Date d'arrivée</th>
             <th>Date fin du permis de travail</th>
             <th>Étudiant</th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>

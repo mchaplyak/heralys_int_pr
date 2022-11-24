@@ -8,7 +8,7 @@ class DbSideMenu extends Component {
     return (
       <div className="border-end bg-white" id="sidebar-wrapper">
         <div className="sidebar-heading border-bottom bg-light p-2">
-          DB Manage
+          Manage Database
         </div>
         <div className="list-group list-group-flush">
           <ListGroupItem

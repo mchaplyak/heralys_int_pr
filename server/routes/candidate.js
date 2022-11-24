@@ -20,7 +20,7 @@ recordRoutes.route("/listOfCandidates").get(function (req, res) {
     });
 });
 
-// This section will help you get a single record by id
+// get a single candidate by id
 recordRoutes.route("/listOfCandidates/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
@@ -41,6 +41,7 @@ recordRoutes.route("/listOfCandidates/add").post(function (req, response) {
     date_arriver: req.body.date_arriver,
     date_fin_permis_travail: req.body.date_fin_permis_travail,
     etudiant: req.body.etudiant,
+    type_visa: req.body.type_visa,
   };
   db_connect.collection("Candidat").insertOne(myobj, function (err, res) {
     if (err) throw err;

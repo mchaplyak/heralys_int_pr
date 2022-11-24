@@ -58,28 +58,28 @@ class NavBar extends Component {
             <Navbar.Toggle aria-controls={"responsive-navbar-nav"} />
             <Navbar.Collapse id={"responsive-navbar-nav"}>
               <Nav className={"me-auto"}>
-                <Nav.Link href={"/"}>Home</Nav.Link>
-                <Nav.Link href={"/refLinks"}>Reference Links</Nav.Link>
+                {/*<Nav.Link href={"/"}>Home</Nav.Link>*/}
+                {/*<Nav.Link href={"/refLinks"}>Reference Links</Nav.Link>*/}
                 <NavDropdown title={"Clients"} id={"basic-nav-dropdown"}>
                   <NavDropdown.Item href={"/creatingContacts"}>
-                    Creating contacts
+                    List of Clients
                   </NavDropdown.Item>
                   <NavDropdown.Item href={"/creatingClients"}>
-                    Creating clients
+                    Add a Client
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title={"Job offers"} id={"basic-nav-dropdown"}>
-                  <NavDropdown.Item href={"/addAnOffer"}>
-                    Add an offer
-                  </NavDropdown.Item>
                   <NavDropdown.Item href={"/joHistory"}>
-                    History of job offers
+                    List of Job Offers
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href={"/addAnOffer"}>
+                    Add a Job Offer
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title={"Candidates"} id={"basic-nav-dropdown"}>
-                  <NavDropdown.Item href={"/registration"}>
+                  {/*<NavDropdown.Item href={"/registration"}>
                     Registration
-                  </NavDropdown.Item>
+                  </NavDropdown.Item>*/}
                   <NavDropdown.Item href={"/listOfCandidates"}>
                     List of candidates
                   </NavDropdown.Item>
@@ -90,11 +90,12 @@ class NavBar extends Component {
                     List of interviews
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href={"/valCv"}>Validation CV</Nav.Link>
-                <NavDropdown title={"Manage"} id={"basic-nav-dropdown"}>
-                  <Nav.Link href={"/dbLangType"}>Database</Nav.Link>
-                  <Nav.Link href={"/linksOfInt"}>Links of Interest</Nav.Link>
-                </NavDropdown>
+
+                {/*<Nav.Link href={"/valCv"}>Validation CV</Nav.Link>*/}
+                {/*<NavDropdown title={"Manage"} id={"basic-nav-dropdown"}>*/}
+                <Nav.Link href={"/dbLangType"}>Database</Nav.Link>
+                {/*<Nav.Link href={"/linksOfInt"}>Links of Interest</Nav.Link>*/}
+                {/*</NavDropdown></Navbar.Collapse>*/}
               </Nav>
             </Navbar.Collapse>
           </Container>

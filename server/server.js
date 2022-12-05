@@ -22,6 +22,7 @@ app.use(require("./routes/domainType"));
 app.use(require("./routes/studyTime"));
 app.use(require("./routes/typeEmpl"));
 app.use(require("./routes/salary"));
+app.use(require("./routes/jobOffer"));
 
 // get driver connection
 const dbo = require("./db/conn");

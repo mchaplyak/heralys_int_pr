@@ -1,13 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
+import JobOffersList from "../../components/JobOffersList";
 
 class JoHistoryPage extends Component {
-    render() {
-        return (
-            <div>
-                JobOffersHistoryPage
-            </div>
-        );
-    }
+  render() {
+    return <JobOffersList />;
+  }
 }
 
 export default JoHistoryPage;

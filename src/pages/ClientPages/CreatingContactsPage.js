@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 
+import AddContact from "../../components/AddContact";
+
 class CreatingContactsPage extends Component {
     render() {
         return (
             <div>
-                Creating Contacts Page
+                {/* Creating Contacts Page */}
+                <AddContact/>
             </div>
         );
     }

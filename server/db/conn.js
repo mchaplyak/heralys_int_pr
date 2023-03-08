@@ -14,7 +14,7 @@ module.exports = {
       if (db) {
         _db = db.db("Heralys");
         console.log("Successfully connected to MongoDB.");
-        console.log("Test!!!");
+        // console.log("Test!!!");
       }
       return callback(err);
     });

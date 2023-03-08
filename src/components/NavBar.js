@@ -5,7 +5,13 @@ import { Routes, Route } from "react-router-dom";
 import logo from "../assets/heralys_vector.png";
 import HomePage from "../pages/HomePage/HomePage";
 import RefLinksPage from "../pages/RefLinksPage/RefLinksPage";
+
+import ListOfContactsPage from "../pages/ClientPages/ListOfContactsPage";
+
 import CreatingContactsPage from "../pages/ClientPages/CreatingContactsPage";
+
+import ListOfClientsPage from "../pages/ClientPages/ListOfClientsPage";
+
 import CreatingClientsPage from "../pages/ClientPages/CreatingClientsPage";
 import AddAnOfferPage from "../pages/JobOfferPages/AddAnOfferPage";
 import JoHistoryPage from "../pages/JobOfferPages/JoHistoryPage";
@@ -61,7 +67,13 @@ class NavBar extends Component {
                 {/*<Nav.Link href={"/"}>Home</Nav.Link>*/}
                 {/*<Nav.Link href={"/refLinks"}>Reference Links</Nav.Link>*/}
                 <NavDropdown title={"Clients"} id={"basic-nav-dropdown"}>
+                  <NavDropdown.Item href={"/listOfContacts"}>
+                    List of Contacts
+                  </NavDropdown.Item>
                   <NavDropdown.Item href={"/creatingContacts"}>
+                    Add a Contact
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href={"/listOfClients"}>
                     List of Clients
                   </NavDropdown.Item>
                   <NavDropdown.Item href={"/creatingClients"}>
@@ -104,7 +116,9 @@ class NavBar extends Component {
         <Routes>
           <Route path={"/*"} element={<HomePage />} />
           <Route path={"refLinks"} element={<RefLinksPage />} />
+          <Route path={"listOfContacts"} element={<ListOfContactsPage />} />
           <Route path={"creatingContacts"} element={<CreatingContactsPage />} />
+          <Route path={"listOfClients"} element={<ListOfClientsPage />} />
           <Route path={"creatingClients"} element={<CreatingClientsPage />} />
           <Route path={"addAnOffer"} element={<AddAnOfferPage />} />
           <Route path={"joHistory"} element={<JoHistoryPage />} />

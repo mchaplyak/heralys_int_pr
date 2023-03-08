@@ -2,3 +2,29 @@
     padding-top: 15px;
     width: 50%;
 }
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: rgb(233, 241, 247);
+}
+
+
+tbody tr:hover {
+    background-color: rgb(163, 185, 218);
+  }
+
+  .search {
+    padding: 5px;
+    font-size: 20px;
+    margin: 10px  0px ;
+  }

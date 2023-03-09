@@ -10,6 +10,9 @@ import ListOfContactsPage from "../pages/ClientPages/ListOfContactsPage";
 
 import CreatingContactsPage from "../pages/ClientPages/CreatingContactsPage";
 
+import SearchContactsPage from "../pages/ClientPages/SearchContactsPage";
+import SearchClientsPage from "../pages/ClientPages/SearchClientsPage";
+
 import ListOfClientsPage from "../pages/ClientPages/ListOfClientsPage";
 
 import CreatingClientsPage from "../pages/ClientPages/CreatingClientsPage";
@@ -73,13 +76,20 @@ class NavBar extends Component {
                   <NavDropdown.Item href={"/creatingContacts"}>
                     Add a Contact
                   </NavDropdown.Item>
+                  <NavDropdown.Item href={"/searchContacts"}>
+                    Search Contacts
+                  </NavDropdown.Item>
                   <NavDropdown.Item href={"/listOfClients"}>
                     List of Clients
                   </NavDropdown.Item>
                   <NavDropdown.Item href={"/creatingClients"}>
                     Add a Client
                   </NavDropdown.Item>
+                  <NavDropdown.Item href={"/searchClients"}>
+                    Search Clients
+                  </NavDropdown.Item>
                 </NavDropdown>
+
                 <NavDropdown title={"Job offers"} id={"basic-nav-dropdown"}>
                   <NavDropdown.Item href={"/joHistory"}>
                     List of Job Offers
@@ -118,7 +128,9 @@ class NavBar extends Component {
           <Route path={"refLinks"} element={<RefLinksPage />} />
           <Route path={"listOfContacts"} element={<ListOfContactsPage />} />
           <Route path={"creatingContacts"} element={<CreatingContactsPage />} />
+          <Route path={"searchContacts"} element={<SearchContactsPage />} />
           <Route path={"listOfClients"} element={<ListOfClientsPage />} />
+          <Route path={"searchClients"} element={<SearchClientsPage />} />
           <Route path={"creatingClients"} element={<CreatingClientsPage />} />
           <Route path={"addAnOffer"} element={<AddAnOfferPage />} />
           <Route path={"joHistory"} element={<JoHistoryPage />} />

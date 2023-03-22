@@ -27,7 +27,7 @@ const Record = (props) => (
 
       <td>
         {/*Edit*/}
-        <Link to={`/editContact/${props.record._id}`}>
+        <Link to={`/editClient/${props.record._id}`}>
           <img
             src={require("../assets/edit-btn.png")}
             alt="edit-btn"

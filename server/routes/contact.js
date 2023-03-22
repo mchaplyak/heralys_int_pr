@@ -37,8 +37,8 @@ recordRoutes.route("/listOfContacts/:id").get(function (req, res) {
   // get contacts by search 
   recordRoutes.route("/listOfContacts/search/:keyword").get(function (req, res) {
     let db_connect = dbo.getDb();
-   console.log("req.params.keyword", req.params.keyword);
-   console.log("req.params", req.params);
+
+//    console.log("req.params", req.params);
 
    if (req.params.keyword === "undefined"){
     console.log("req.params.keyword_____________undefined");
@@ -58,7 +58,6 @@ recordRoutes.route("/listOfContacts/:id").get(function (req, res) {
                              { lastDate: serchParam}
                             ]};
 
-          console.log("myquery!!!!!!!!!!", myquery);
 
           db_connect.collection("Contact").find(myquery).toArray(function (err, result) {
             if (err) throw err;
@@ -93,20 +92,7 @@ recordRoutes.route("/listOfContacts/:id").get(function (req, res) {
       // res.json(result);
     });
 
-  //  console.log("dataFromContacts=",dataFromContacts);
-
-  //  res.json(search(dataFromContacts).slice(0, 10))
-
-    
-    // db_connect.collection("Contact").find(q).toArray(function (err, result) {
-    //   if (err) throw err;
-    //   res.json(result);
-
-    //   console.log("res.json(result)=",res.json(result));
-    // });
-
-  //   q ? res.json(search(dataFromContacts).slice(0, 10)) : res.json(dataFromContacts.slice(0, 10));
-    
+   
   });
 
 

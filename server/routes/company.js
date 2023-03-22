@@ -24,8 +24,8 @@ recordRoutes.route("/listOfCompanies").get(function (req, res) {
   // get companies/clients by search 
   recordRoutes.route("/listOfClients/search/:keyword").get(function (req, res) {
     let db_connect = dbo.getDb();
-   console.log("req.params.keyword", req.params.keyword);
-   console.log("req.params", req.params);
+//    console.log("req.params.keyword", req.params.keyword);
+//    console.log("req.params", req.params);
 
    if (req.params.keyword === "undefined"){
  //   console.log("req.params.keyword_____________undefined");
@@ -45,7 +45,7 @@ recordRoutes.route("/listOfCompanies").get(function (req, res) {
                              { domain: searchParam}
                             ]};
 
-          console.log("myquery!!!!!!!", myquery);
+        //   console.log("myquery!!!!!!!", myquery);
 
           db_connect.collection("Entreprise").find(myquery).toArray(function (err, result) {
             if (err) throw err;
